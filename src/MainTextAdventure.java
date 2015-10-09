@@ -8,7 +8,7 @@ public class MainTextAdventure extends javax.swing.JFrame {
     public int playerHealth;
     public String playerName;
     public boolean gameisOn;
-    
+    // Some change
     public MainTextAdventure() {
         initComponents();
     }

@@ -19,6 +19,7 @@ public class weedTripAdventure extends javax.swing.JFrame {
     public weedTripAdventure() {
         initComponents();
     }
+    // Some change
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -19,6 +19,7 @@ public class chatBox extends javax.swing.JFrame {
     public chatBox() {
         initComponents();
     }
+    // Some change
 
     /**
      * This method is called from within the constructor to initialize the form.
