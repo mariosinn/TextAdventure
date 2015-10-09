@@ -7,6 +7,11 @@ public class MainTextAdventure extends javax.swing.JFrame {
      */
     public boolean gameisOn;
     playerInitiate player = new playerInitiate("", 0);
+    mushroomtripAdventure mushroomAdventure = new mushroomtripAdventure( );
+    weedTripAdventure weedAdventure = new weedTripAdventure( );
+    
+    lsdtripAdventure lsdAdventure = new lsdtripAdventure( );
+    
     // Some change
     public MainTextAdventure() {
         initComponents();
@@ -124,7 +129,7 @@ public class MainTextAdventure extends javax.swing.JFrame {
             gameisOn = true;
             player.setHP( 100 );
             player.setName(  inputName );
-            new weedTripAdventure( ).setVisible( true );
+            weedAdventure.setVisible( true );
             input_StartNewGame.setVisible( false );
         }
         else if ( selectedObject == 1 )
@@ -132,7 +137,7 @@ public class MainTextAdventure extends javax.swing.JFrame {
             gameisOn = true;
             player.setHP( 100 );
             player.setName(  inputName );
-            new lsdtripAdventure( ).setVisible( true ); 
+            lsdAdventure.setVisible( true ); 
             input_StartNewGame.setVisible( false );
         }
         else if ( selectedObject == 2 )
@@ -140,7 +145,7 @@ public class MainTextAdventure extends javax.swing.JFrame {
             gameisOn = true;
             player.setHP( 100 );
             player.setName(  inputName );
-            new mushroomtripAdventure( ).setVisible( true );  
+            mushroomAdventure.setVisible( true );  
             input_StartNewGame.setVisible( false );
         }
         

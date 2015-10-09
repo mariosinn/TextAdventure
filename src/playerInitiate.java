@@ -27,7 +27,9 @@ public class playerInitiate {
     public void hit( int rem )
     {
         hp = hp - rem;
+        playerInitiate.updateHealth( );
     }
+    
     
     // Name: heal( int add )
     // Desc: Adds int add to global var hp

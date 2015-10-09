@@ -98,6 +98,11 @@ public class chatBox extends javax.swing.JFrame {
         
     }//GEN-LAST:event_input_PlayerTextMouseClicked
 
+    public void updateHealth(int hp)
+    {
+        output_Health.setText( String.valueOf(hp) );
+    }
+    
     private void input_ChatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_ChatActionPerformed
         if ( input_PlayerText.getText().equals( "Input Text Here" ) )
         {
