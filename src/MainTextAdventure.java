@@ -5,9 +5,8 @@ public class MainTextAdventure extends javax.swing.JFrame {
     /**
      * Creates new form MainTextAdventure
      */
-    public int playerHealth;
-    public String playerName;
     public boolean gameisOn;
+    playerInitiate player = new playerInitiate("", 0);
     // Some change
     public MainTextAdventure() {
         initComponents();
@@ -111,7 +110,11 @@ public class MainTextAdventure extends javax.swing.JFrame {
     // Desc: Starts the Game
     // Returns: Nothing
     private void input_StartNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_StartNewGameActionPerformed
-
+        String inputName = input_Name.getText();
+        if ( inputName.equals( "" ) )
+        {
+            input_Name.setText( "Please Enter a Name" );
+        }
         int selectedObject = input_DrugSelection.getSelectedIndex( );
         
         new chatBox( ).setVisible( true );
@@ -119,17 +122,26 @@ public class MainTextAdventure extends javax.swing.JFrame {
         if ( selectedObject == 0 )
         {
             gameisOn = true;
+            player.setHP( 100 );
+            player.setName(  inputName );
             new weedTripAdventure( ).setVisible( true );
+            input_StartNewGame.setVisible( false );
         }
         else if ( selectedObject == 1 )
         {
             gameisOn = true;
-            new lsdtripAdventure( ).setVisible( true );
+            player.setHP( 100 );
+            player.setName(  inputName );
+            new lsdtripAdventure( ).setVisible( true ); 
+            input_StartNewGame.setVisible( false );
         }
         else if ( selectedObject == 2 )
         {
             gameisOn = true;
-            new mushroomtripAdventure( ).setVisible( true );
+            player.setHP( 100 );
+            player.setName(  inputName );
+            new mushroomtripAdventure( ).setVisible( true );  
+            input_StartNewGame.setVisible( false );
         }
         
     }//GEN-LAST:event_input_StartNewGameActionPerformed
@@ -138,34 +150,6 @@ public class MainTextAdventure extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_input_ExitActionPerformed
 
-    public String startGameName()
-    {
-        String v = "";
-        
-        if ( gameisOn )
-        {
-            v = input_Name.getText();
-        }
-        return playerName = v;
-    }     
-    
-    public String getplayerName()
-    {
-        return playerName;
-    }
-    
-    
-    public int startGameHealth()
-    {
-        int v = 0;
-        
-        if ( gameisOn )
-        {
-            v = 100;
-            
-        }
-        return playerHealth = v;
-    }     
     
     private void input_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_NameActionPerformed
         // TODO add your handling code here:
